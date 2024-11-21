@@ -11,8 +11,12 @@
  Target Server Version : 80035 (8.0.35)
  File Encoding         : 65001
 
- Date: 06/11/2024 21:06:00
+ Date: 21/11/2024 19:56:02
 */
+CREATE DATABASE IF NOT EXISTS warehouse
+CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+USE warehouse;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -23,23 +27,23 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `date_dim`;
 CREATE TABLE `date_dim`  (
   `date_id` int NOT NULL,
-  `DATE` date NULL DEFAULT NULL,
-  `DAY` int NULL DEFAULT NULL,
-  `weekday_id` int NULL DEFAULT NULL,
+  `date` date NULL DEFAULT NULL,
+  `day_from_start` int NULL DEFAULT NULL,
+  `month_from_start` int NULL DEFAULT NULL,
   `weekday_name` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `month_name` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `YEAR` int NULL DEFAULT NULL,
+  `year_num` int NULL DEFAULT NULL,
   `year_mo` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `day_of_month` int NULL DEFAULT NULL,
   `day_of_year` int NULL DEFAULT NULL,
+  `week` int NULL DEFAULT NULL,
+  `week_num_label` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `week_start_date` date NULL DEFAULT NULL,
   `iso_week` int NULL DEFAULT NULL,
-  `iso_weekday` int NULL DEFAULT NULL,
   `iso_week_label` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `iso_week_date` date NULL DEFAULT NULL,
-  `iso_week_of_year` int NULL DEFAULT NULL,
-  `prev_iso_week` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `prev_iso_week_start` date NULL DEFAULT NULL,
-  `QUARTER` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `quarter_id` int NULL DEFAULT NULL,
+  `iso_week_start_date` date NULL DEFAULT NULL,
+  `quarter_label` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `quarter_from_start` int NULL DEFAULT NULL,
   `holiday_status` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `weekend_status` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`date_id`) USING BTREE
@@ -7725,30 +7729,23 @@ INSERT INTO `date_dim` VALUES (7671, '2026-01-01', 7671, 253, 'Thursday', 'Janua
 -- ----------------------------
 DROP TABLE IF EXISTS `dongho`;
 CREATE TABLE `dongho`  (
-  `sr_id` varchar(600) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `sr_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
   `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `price` double NULL DEFAULT NULL,
   `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `gender` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `brand_origin` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `dial_size` double NULL DEFAULT NULL,
   `strap_size` double NULL DEFAULT NULL,
-  `glass_type` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `assembled_in` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_shape` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `hands_num` int NULL DEFAULT NULL,
-  `gem` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `record_time` datetime NULL DEFAULT NULL,
   `date_id` int NULL DEFAULT NULL,
-  `dt_expired` date NULL DEFAULT NULL,
-  `is_active` tinyint(1) NULL DEFAULT NULL,
+  `expired_dt` datetime NULL DEFAULT NULL,
+  `is_deleted` tinyint(1) NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  `updated_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`sr_id`) USING BTREE,
   INDEX `date_id`(`date_id` ASC) USING BTREE,
   CONSTRAINT `dongho_ibfk_1` FOREIGN KEY (`date_id`) REFERENCES `date_dim` (`date_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
@@ -7757,226 +7754,5 @@ CREATE TABLE `dongho`  (
 -- ----------------------------
 -- Records of dongho
 -- ----------------------------
-INSERT INTO `dongho` VALUES ('WMDIQF00L42.0073_2024-11-06 20:58:29', 'WMDIQF00L42.0073', 'Đồng hồ Disney & Marvel Nam M-9062RGB Dây Da 42 mm', 4950000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây da tổng hợp', 42, 22, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00l42.0073-dong-ho-disney-marvel-nam-m-9062rgb-day-da-42-mm-1.png', '2024-11-04 21:48:21', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P37.0062_2024-11-06 20:58:29', 'WMDIQF00P37.0062', 'Đồng hồ Disney & Marvel Nam M-9199-01SWW Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Nam', 'Trắng', 'Trắng', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 37, 21, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0062-dong-ho-disney-marvel-nam-m-9199-01sww-day-cao-su-37-mm-1.png', '2024-11-04 21:49:15', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P37.0063_2024-11-06 20:58:29', 'WMDIQF00P37.0063', 'Đồng hồ Disney & Marvel Nam M-9199-01BBB Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 37, 21, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0063-dong-ho-disney-marvel-nam-m-9199-01bbb-day-cao-su-37-mm-1.png', '2024-11-04 21:49:08', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P40.0061_2024-11-06 20:58:29', 'WMDIQF00P40.0061', 'Đồng hồ Disney & Marvel Nam M-9232LTW Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Nam', 'Trắng', 'Đa Màu', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 40, 20, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0061-dong-ho-disney-marvel-nam-m-9232ltw-day-cao-su-40-mm-1.png', '2024-11-04 21:49:23', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P42.0070_2024-11-06 20:58:29', 'WMDIQF00P42.0070', 'Đồng hồ Disney & Marvel Nam M-9059SGG Dây Cao Su 42 mm', 4750000, 'Disney Watch', 'Nam', 'Xanh lá cây', 'Xanh lá cây', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 42, 22, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p42.0070-dong-ho-disney-marvel-nam-m-9059sgg-day-cao-su-42-mm-1.png', '2024-11-04 21:48:26', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0065_2024-11-06 20:58:29', 'WMDIQF00P50.0065', 'Đồng hồ Disney & Marvel Nam M-5029BRB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Đỏ', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0065-dong-ho-disney-marvel-nam-m-5029brb-day-da-50-mm-1.png', '2024-11-04 21:49:00', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0066_2024-11-06 20:58:29', 'WMDIQF00P50.0066', 'Đồng hồ Disney & Marvel Nam M-5029BGB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Xanh lá cây', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0066-dong-ho-disney-marvel-nam-m-5029bgb-day-da-50-mm-1.png', '2024-11-04 21:48:52', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0067_2024-11-06 20:58:29', 'WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4000000, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-11-04 21:48:45', 7248, '2024-11-06', 0);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0067_2024-11-06 20:59:20', 'WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4555555, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-11-04 21:48:45', 7248, '2024-11-06', 0);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0067_2024-11-06 21:04:01', 'WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4332323, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-11-04 21:48:45', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0068_2024-11-06 20:58:29', 'WMDIQF00P50.0068', 'Đồng hồ Disney & Marvel Nam M-5029BLR Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0068-dong-ho-disney-marvel-nam-m-5029blr-day-da-50-mm-1.png', '2024-11-04 21:48:38', 7248, '9999-12-31', 1);
-INSERT INTO `dongho` VALUES ('WMDIQF00P50.0069_2024-11-06 20:58:29', 'WMDIQF00P50.0069', 'Đồng hồ Disney & Marvel Nam M-5029HHB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0069-dong-ho-disney-marvel-nam-m-5029hhb-day-da-50-mm-1.png', '2024-11-04 21:48:32', 7248, '9999-12-31', 1);
-
--- ----------------------------
--- Table structure for temp_exists_has_change_pnj
--- ----------------------------
-DROP TABLE IF EXISTS `temp_exists_has_change_pnj`;
-CREATE TABLE `temp_exists_has_change_pnj`  (
-  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `price` double NULL DEFAULT NULL,
-  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `gender` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `brand_origin` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_size` double NULL DEFAULT NULL,
-  `strap_size` double NULL DEFAULT NULL,
-  `glass_type` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `assembled_in` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_shape` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `hands_num` int NULL DEFAULT NULL,
-  `gem` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `record_time` datetime NULL DEFAULT NULL,
-  `date_id` int NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of temp_exists_has_change_pnj
--- ----------------------------
-INSERT INTO `temp_exists_has_change_pnj` VALUES ('WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4332323, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-11-04 21:48:45', 7248);
-
--- ----------------------------
--- Table structure for temp_exists_pnj
--- ----------------------------
-DROP TABLE IF EXISTS `temp_exists_pnj`;
-CREATE TABLE `temp_exists_pnj`  (
-  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `price` double NULL DEFAULT NULL,
-  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `gender` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `brand_origin` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_size` double NULL DEFAULT NULL,
-  `strap_size` double NULL DEFAULT NULL,
-  `glass_type` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `assembled_in` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_shape` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `hands_num` int NULL DEFAULT NULL,
-  `gem` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `record_time` datetime NULL DEFAULT NULL,
-  `date_id` int NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of temp_exists_pnj
--- ----------------------------
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00L42.0073', 'Đồng hồ Disney & Marvel Nam M-9062RGB Dây Da 42 mm', 4950000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây da tổng hợp', 42, 22, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00l42.0073-dong-ho-disney-marvel-nam-m-9062rgb-day-da-42-mm-1.png', '2024-11-04 21:48:21', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P37.0062', 'Đồng hồ Disney & Marvel Nam M-9199-01SWW Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Nam', 'Trắng', 'Trắng', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 37, 21, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0062-dong-ho-disney-marvel-nam-m-9199-01sww-day-cao-su-37-mm-1.png', '2024-11-04 21:49:15', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P37.0063', 'Đồng hồ Disney & Marvel Nam M-9199-01BBB Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 37, 21, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0063-dong-ho-disney-marvel-nam-m-9199-01bbb-day-cao-su-37-mm-1.png', '2024-11-04 21:49:08', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P40.0061', 'Đồng hồ Disney & Marvel Nam M-9232LTW Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Nam', 'Trắng', 'Đa Màu', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 40, 20, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0061-dong-ho-disney-marvel-nam-m-9232ltw-day-cao-su-40-mm-1.png', '2024-11-04 21:49:23', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P42.0070', 'Đồng hồ Disney & Marvel Nam M-9059SGG Dây Cao Su 42 mm', 4750000, 'Disney Watch', 'Nam', 'Xanh lá cây', 'Xanh lá cây', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Thép không gỉ', 'Dây cao su Caoutchouc caocấp', 42, 22, 'kính khoáng', 'Trung Quốc', 'Tròn', 3, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p42.0070-dong-ho-disney-marvel-nam-m-9059sgg-day-cao-su-42-mm-1.png', '2024-11-04 21:48:26', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0065', 'Đồng hồ Disney & Marvel Nam M-5029BRB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Đỏ', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0065-dong-ho-disney-marvel-nam-m-5029brb-day-da-50-mm-1.png', '2024-11-04 21:49:00', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0066', 'Đồng hồ Disney & Marvel Nam M-5029BGB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Xanh lá cây', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0066-dong-ho-disney-marvel-nam-m-5029bgb-day-da-50-mm-1.png', '2024-11-04 21:48:52', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4332323, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-11-04 21:48:45', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0068', 'Đồng hồ Disney & Marvel Nam M-5029BLR Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Xanh Dương', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0068-dong-ho-disney-marvel-nam-m-5029blr-day-da-50-mm-1.png', '2024-11-04 21:48:38', 7248);
-INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0069', 'Đồng hồ Disney & Marvel Nam M-5029HHB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Nam', 'Đen', 'Đen', 'Đồng hồ nhượng quyền Disney', 'Quartz (Pin)', 'Nhựa', 'Dây PU', 50, 29, 'Kính mica', 'Trung Quốc', 'Tròn', 2, 'Không gắn đá', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0069-dong-ho-disney-marvel-nam-m-5029hhb-day-da-50-mm-1.png', '2024-11-04 21:48:32', 7248);
-
--- ----------------------------
--- Table structure for temp_not_exists_pnj
--- ----------------------------
-DROP TABLE IF EXISTS `temp_not_exists_pnj`;
-CREATE TABLE `temp_not_exists_pnj`  (
-  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `price` double NULL DEFAULT NULL,
-  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `gender` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_color` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `brand_origin` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_size` double NULL DEFAULT NULL,
-  `strap_size` double NULL DEFAULT NULL,
-  `glass_type` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `assembled_in` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `dial_shape` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `hands_num` int NULL DEFAULT NULL,
-  `gem` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
-  `record_time` datetime NULL DEFAULT NULL,
-  `date_id` int NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of temp_not_exists_pnj
--- ----------------------------
-
--- ----------------------------
--- Procedure structure for insert_exists_has_change_table_pnj
--- ----------------------------
-DROP PROCEDURE IF EXISTS `insert_exists_has_change_table_pnj`;
-delimiter ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_exists_has_change_table_pnj`()
-BEGIN
-  -- UPDATE OLD RECORD
-  UPDATE dongho d
-  SET dt_expired = NOW(),
-  is_active = 0
-  WHERE EXISTS (SELECT 1 FROM temp_exists_has_change_pnj t WHERE d.product_id = t.product_id);
-  -- INSERT NEW RECORD
-  INSERT INTO dongho
-    SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand,
-    gender, dial_color, strap_color, brand_origin, movement, case_material, strap_material, dial_size, strap_size, glass_type,
-    assembled_in, dial_shape, hands_num, gem, img_url, record_time, date_id, '9999-12-31' AS dt_expired,1 AS is_active
-    FROM temp_exists_has_change_pnj;
-END
-;;
-delimiter ;
-
--- ----------------------------
--- Procedure structure for insert_not_exists_table_pnj
--- ----------------------------
-DROP PROCEDURE IF EXISTS `insert_not_exists_table_pnj`;
-delimiter ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_not_exists_table_pnj`()
-BEGIN
-  INSERT INTO dongho
-    SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand,
-    gender, dial_color, strap_color, brand_origin, movement, case_material, strap_material, dial_size, strap_size, glass_type,
-    assembled_in, dial_shape, hands_num, gem, img_url, record_time, date_id, '9999-12-31' AS dt_expired,1 AS is_active
-    FROM temp_not_exists_pnj;
-END
-;;
-delimiter ;
-
--- ----------------------------
--- Procedure structure for proc_load_wh_pnj
--- ----------------------------
-DROP PROCEDURE IF EXISTS `proc_load_wh_pnj`;
-delimiter ;;
-CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_load_wh_pnj`()
-BEGIN
-  DROP TABLE IF EXISTS temp_not_exists_pnj;
-  DROP TABLE IF EXISTS temp_exists_pnj;
-  DROP TABLE IF EXISTS temp_exists_has_change_pnj;
-	-- CREATE NOT EXISTS TABLE
-    CREATE TABLE temp_not_exists_pnj
-    AS
-    SELECT *
-    FROM staging.dongho_pnj_daily s
-    WHERE NOT EXISTS(
-		SELECT 1
-        FROM warehouse.dongho w
-        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
-    );
-    -- CREATE EXISTS TABLE
-    CREATE TABLE temp_exists_pnj
-    AS
-    SELECT *
-    FROM staging.dongho_pnj_daily s
-    WHERE EXISTS(
-		SELECT 1
-        FROM warehouse.dongho w
-        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
-    );
-    -- CREATE EXISTS HAS CHANGE TABLE
-    CREATE TABLE temp_exists_has_change_pnj
-      AS
-      SELECT *
-      FROM warehouse.temp_exists_pnj e
-      WHERE NOT EXISTS(
-      SELECT 1
-          FROM warehouse.dongho w
-          WHERE 	e.product_id	=	w.product_id
-      AND	e.product_name	=	w.product_name
-      AND	e.price	=	w.price
-      AND	e.brand	=	w.brand
-      AND	e.gender	=	w.gender
-      AND	e.dial_color	=	w.dial_color
-      AND	e.strap_color	=	w.strap_color
-      AND	e.brand_origin	=	w.brand_origin
-      AND	e.movement	=	w.movement
-      AND	e.case_material	=	w.case_material
-      AND	e.strap_material	=	w.strap_material
-      AND	e.dial_size	=	w.dial_size
-      AND	e.strap_size	=	w.strap_size
-      AND	e.glass_type	=	w.glass_type
-      AND	e.assembled_in	=	w.assembled_in
-      AND	e.dial_shape	=	w.dial_shape
-      AND	e.hands_num	=	w.hands_num
-      AND	e.gem	=	w.gem
-      AND	e.img_url	=	w.img_url
-      );
-    CALL insert_not_exists_table_pnj;
-    CALL insert_exists_has_change_table_pnj;
-END
-;;
-delimiter ;
 
 SET FOREIGN_KEY_CHECKS = 1;
