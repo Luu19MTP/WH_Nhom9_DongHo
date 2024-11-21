@@ -1,0 +1,22 @@
+D:\DW
++---presentation
+\---staging
+    |   config.xml
+    |   
+    +---data
+    |       pnj_11112024.csv
+    |       pnj_12112024.csv
+    |       pnj_28102024.csv
+    |       pnj_29102024.csv
+    |       pnj_31102024.csv
+    |       pnj_3112024.csv
+    |       pnj_4112024.csv
+    |       
+    +---extract
+    |       pnj_scraping.jar
+    |       scraping.jar
+    |       
+    +---load
+    |       load_to_staging.jar
+    |       
+    \---transform
