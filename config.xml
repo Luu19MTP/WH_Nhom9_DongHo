@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mysql>
+	<database name="control">
+		<server>127.0.0.1:3306</server>
+		<name>control</name>
+		<username>root</username>
+		<password>0607</password>
+	</database>
+	<database name="staging">
+		<server>127.0.0.1:3306</server>
+		<name>staging</name>
+		<username>root</username>
+		<password>0607</password>
+	</database>
+	<database name="warehouse">
+		<server>127.0.0.1:3306</server>
+		<name>warehouse</name>
+		<username>root</username>
+		<password>0607</password>
+	</database>
+</mysql>
