@@ -11,7 +11,7 @@
  Target Server Version : 80035 (8.0.35)
  File Encoding         : 65001
 
- Date: 21/11/2024 19:49:43
+ Date: 26/11/2024 21:51:02
 */
 CREATE DATABASE IF NOT EXISTS control
 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -37,7 +37,7 @@ CREATE TABLE `config_mart`  (
 -- ----------------------------
 -- Records of config_mart
 -- ----------------------------
-INSERT INTO `config_mart` VALUES (1, 'Admin', 'localhost', 'D://DW/presentation/dongho_aggregate.csv\r\n', 'D://DW/presentation/load_to_mart.jar\r\n');
+INSERT INTO `config_mart` VALUES (1, 'Admin', 'localhost', 'D://DW/presentation/dongho_aggregate.csv', 'D://DW/presentation/load_to_mart.jar');
 
 -- ----------------------------
 -- Table structure for config_source
@@ -65,15 +65,15 @@ CREATE TABLE `config_source`  (
 -- ----------------------------
 -- Records of config_source
 -- ----------------------------
-INSERT INTO `config_source` VALUES (1, 'PNJ', 'https://www.pnj.com.vn/dong-ho/\r\n', 'D://DW/staging/data\r\n', 'pnj\r\n', 'D://DW/staging/extract/pnj_scraping.jar\r\n', 'dongho_pnj_daily_temp\r\n', 'proc_transform_pnj\r\n', 'proc_load_wh_pnj\r\n', 'dongho_aggregate\r\n', 'proc_aggregate', 'D://DW/staging/load/dongho_aggregate.csv\r\n', 1);
-INSERT INTO `config_source` VALUES (2, 'Đăng Quang Watch', 'https://www.dangquangwatch.vn/dong-ho.html', 'D://DW/staging/data\r\n', 'dqw', 'D://DW/staging/extract/dqw_scraping.jar', 'dongho_dqw_daily_temp', 'proc_transform_dqw', 'proc_load_wh_dqw', 'dongho_aggregate', 'proc_aggregate', 'D://DW/staging/load/dongho_aggregate.csv\r\n', 1);
+INSERT INTO `config_source` VALUES (1, 'PNJ', 'https://www.pnj.com.vn/dong-ho/', 'D://DW/staging/data', 'pnj', 'D://DW/staging/extract/pnj_scraping.jar', 'dongho_pnj_daily_temp', 'proc_transform_pnj', 'proc_load_wh_pnj', 'dongho_aggregate', 'proc_aggregate', 'D://DW/staging/load/dongho_aggregate.csv', 1);
+INSERT INTO `config_source` VALUES (2, 'Đăng Quang Watch', 'https://www.dangquangwatch.vn/dong-ho.html', 'D://DW/staging/data', 'dqw', 'D://DW/staging/extract/dqw_scraping.jar', 'dongho_dqw_daily_temp', 'proc_transform_dqw', 'proc_load_wh_dqw', 'dongho_aggregate', 'proc_aggregate', 'D://DW/staging/load/dongho_aggregate.csv', 1);
 
 -- ----------------------------
 -- Table structure for file_log
 -- ----------------------------
 DROP TABLE IF EXISTS `file_log`;
 CREATE TABLE `file_log`  (
-  `file_id` int NULL DEFAULT NULL,
+  `file_id` int NOT NULL AUTO_INCREMENT,
   `source_id` int NULL DEFAULT NULL,
   `file_path` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `TIME` datetime NULL DEFAULT NULL,
@@ -81,6 +81,7 @@ CREATE TABLE `file_log`  (
   `size` double NULL DEFAULT NULL,
   `STATUS` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
   `execute_time` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`file_id`) USING BTREE,
   INDEX `source_id`(`source_id` ASC) USING BTREE,
   CONSTRAINT `file_log_ibfk_1` FOREIGN KEY (`source_id`) REFERENCES `config_source` (`source_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
