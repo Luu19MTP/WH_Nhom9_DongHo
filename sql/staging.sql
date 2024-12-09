@@ -11,7 +11,7 @@
  Target Server Version : 80035 (8.0.35)
  File Encoding         : 65001
 
- Date: 21/11/2024 19:54:28
+ Date: 09/12/2024 21:50:54
 */
 CREATE DATABASE IF NOT EXISTS staging
 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -7819,5 +7819,49 @@ CREATE TABLE `dongho_pnj_daily_temp`  (
 -- ----------------------------
 -- Records of dongho_pnj_daily_temp
 -- ----------------------------
+
+-- ----------------------------
+-- Procedure structure for proc_transform_dqw
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `proc_transform_dqw`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_transform_dqw`()
+BEGIN
+	-- LOAD FROM TEMP
+	INSERT INTO dongho_dqw_daily
+	SELECT *, NULL
+	FROM dongho_dqw_daily_temp d
+  WHERE d.field1 IS NOT NULL
+  AND d.field3 != 0;
+  TRUNCATE dongho_dqw_daily_temp;
+	-- TRANSFORM DATE_DIM
+	UPDATE dongho_dqw_daily
+  INNER JOIN date_dim ON DATE(dongho_dqw_daily.record_time) = date_dim.date
+	SET dongho_dqw_daily.date_id = date_dim.date_id;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for proc_transform_pnj
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `proc_transform_pnj`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_transform_pnj`()
+BEGIN
+	-- LOAD FROM TEMP
+	INSERT INTO dongho_pnj_daily
+	SELECT *, NULL
+	FROM dongho_pnj_daily_temp d
+  WHERE d.field1 IS NOT NULL
+  AND d.field3 != 0;
+  TRUNCATE dongho_pnj_daily_temp;
+	-- TRANSFORM DATE_DIM
+	UPDATE dongho_pnj_daily
+  INNER JOIN date_dim ON DATE(dongho_pnj_daily.record_time) = date_dim.date
+	SET dongho_pnj_daily.date_id = date_dim.date_id;
+END
+;;
+delimiter ;
 
 SET FOREIGN_KEY_CHECKS = 1;
