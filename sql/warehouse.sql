@@ -11,7 +11,7 @@
  Target Server Version : 80035 (8.0.35)
  File Encoding         : 65001
 
- Date: 21/11/2024 19:56:02
+ Date: 09/12/2024 21:51:42
 */
 CREATE DATABASE IF NOT EXISTS warehouse
 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -7754,5 +7754,483 @@ CREATE TABLE `dongho`  (
 -- ----------------------------
 -- Records of dongho
 -- ----------------------------
+INSERT INTO `dongho` VALUES ('AG-G9005A G-BK_2024-12-09 21:43:11', 'AG-G9005A G-BK', 'Đồng hồ Aries Gold AG-G9005A G-BK', 12670000, 'Aries Gold', 'Automatic (cơ tự động)', 42, 22, 'Dây da', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/1746421388_%C4%91%E1%BB%93ng%20h%E1%BB%93%20c%C6%A1%20(10).jpg', '2024-12-09 21:40:17', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DD6013C_2024-12-09 21:43:11', 'DD6013C', 'Đồng hồ Diamond D DD6013C', 7868000, 'Diamond D', 'Quartz/Pin', 34, 0, 'Stainless Steel', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/785304038_dong-ho-nu.jpg', '2024-12-09 21:40:39', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM1003S-BL Tiffany Blue_2024-12-09 21:43:11', 'DM1003S-BL Tiffany Blue', 'Đồng hồ Diamond D DM1003S-BL Tiffany Blue', 4350000, 'Diamond D', 'Quartz/Pin', 36.5, 16, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/847068948_dong-ho-thoi-trang63.jpg', '2024-12-09 21:40:40', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM2110L-01_2024-12-09 21:43:11', 'DM2110L-01', 'Đồng hồ Diamond D DM2110L-01', 12500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/387308780_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:22', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM2110L-02_2024-12-09 21:43:11', 'DM2110L-02', 'Đồng hồ Diamond D DM2110L-02', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/867845623_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:23', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM2110L-03_2024-12-09 21:43:11', 'DM2110L-03', 'Đồng hồ Diamond D DM2110L-03', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/1119210792_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:24', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM2110L-04 Tiffany Blue_2024-12-09 21:43:11', 'DM2110L-04 Tiffany Blue', 'Đồng hồ Diamond D DM2110L-04 Tiffany Blue', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/22163033_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:25', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM55865IG-B_2024-12-09 21:43:11', 'DM55865IG-B', 'Đồng hồ Diamond D DM55865IG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/835071113_dong-ho-nu-thoi-trang16.jpg', '2024-12-09 21:40:19', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM55865RG-B_2024-12-09 21:43:11', 'DM55865RG-B', 'Đồng hồ Diamond D DM55865RG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1639341263_dong-ho-nu-thoi-trang22.jpg', '2024-12-09 21:40:21', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM55865S-B_2024-12-09 21:43:11', 'DM55865S-B', 'Đồng hồ Diamond D DM55865S-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1078864526_dong-ho-nu-Diamond-D-DM55865S-B.jpg4.jpg', '2024-12-09 21:40:18', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM63095IG_2024-12-09 21:43:11', 'DM63095IG', 'Đồng hồ Diamond D DM63095IG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1122261145_dong-ho-nu-thoi-trang55.jpg', '2024-12-09 21:40:31', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM63095RG_2024-12-09 21:43:11', 'DM63095RG', 'Đồng hồ Diamond D DM63095RG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1528264129_dong-ho-nu-thoi-trang57.jpg', '2024-12-09 21:40:34', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM63095S_2024-12-09 21:43:11', 'DM63095S', 'Đồng hồ Diamond D DM63095S', 9750000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/844646124_dong-ho-nu-thoi-trang52.jpg', '2024-12-09 21:40:29', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM64205IG-R_2024-12-09 21:43:11', 'DM64205IG-R', 'Đồng hồ Diamond D DM64205IG-R', 5890000, 'Diamond D', 'Quartz/Pin', 33, 16, 'Dây da', 'Hợp kim mạ PVD , đính đá swarovsky', 'https://www.dangquangwatch.vn/upload/img_big/1477535241_dong-ho-nu-thoi-trang5.jpg', '2024-12-09 21:40:38', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM65305IG_2024-12-09 21:43:11', 'DM65305IG', 'Đồng hồ Diamond D DM65305IG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang48-1530435122.jpg', '2024-12-09 21:40:35', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM65305RG_2024-12-09 21:43:11', 'DM65305RG', 'Đồng hồ Diamond D DM65305RG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang46-611652382.jpg', '2024-12-09 21:40:36', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM65305S_2024-12-09 21:43:11', 'DM65305S', 'Đồng hồ Diamond D DM65305S', 9300000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1187229712_2.ca-s%E1%BB%B9-H%C3%B2a-Minzy-%C4%91eo-%C4%91%E1%BB%93ng-h%E1%BB%93-%C4%90%C4%83ng-Quang-DM65305S--(2).jpg', '2024-12-09 21:40:37', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM74505IG-B_2024-12-09 21:43:11', 'DM74505IG-B', 'Đồng hồ Diamond D DM74505IG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1104056469_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:28', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM74505RG-B_2024-12-09 21:43:11', 'DM74505RG-B', 'Đồng hồ Diamond D DM74505RG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1461665036_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:26', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('DM74505W-B Diamond_2024-12-09 21:43:11', 'DM74505W-B Diamond', 'Đồng hồ Diamond D DM74505W-B Diamond', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây cao su cao cấp', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/217483874_dong-ho-nu-thoi-trang19.jpg', '2024-12-09 21:40:27', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 21:43:11', '2024-12-09 21:43:11');
+INSERT INTO `dongho` VALUES ('WMDIAF00P50.0055_2024-12-09 20:19:47', 'WMDIAF00P50.0055', 'Đồng hồ Disney & Marvel Nam M-6069B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0055-dong-ho-disney-marvel-nam-m-6069b-day-cao-su-50-mm-1.png', '2024-12-09 20:09:00', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P50.0056_2024-12-09 20:19:47', 'WMDIAF00P50.0056', 'Đồng hồ Disney & Marvel Nam M-6069R Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0056-dong-ho-disney-marvel-nam-m-6069r-day-cao-su-50-mm-1.png', '2024-12-09 20:08:56', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P50.0057_2024-12-09 20:19:47', 'WMDIAF00P50.0057', 'Đồng hồ Disney & Marvel Nam M-6072B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0057-dong-ho-disney-marvel-nam-m-6072b-day-cao-su-50-mm-1.png', '2024-12-09 20:08:51', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P50.0058_2024-12-09 20:19:47', 'WMDIAF00P50.0058', 'Đồng hồ Disney & Marvel Nam M-6072B1 Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0058-dong-ho-disney-marvel-nam-m-6072b1-day-cao-su-50-mm-1.png', '2024-12-09 20:08:45', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P50.0059_2024-12-09 20:19:47', 'WMDIAF00P50.0059', 'Đồng hồ Disney & Marvel Nam M-6072W Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0059-dong-ho-disney-marvel-nam-m-6072w-day-cao-su-50-mm-1.png', '2024-12-09 20:08:34', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P53.0053_2024-12-09 20:19:47', 'WMDIAF00P53.0053', 'Đồng hồ Disney & Marvel Nam M-6066B Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0053-dong-ho-disney-marvel-nam-m-6066b-day-cao-su-53-mm-1.png', '2024-12-09 20:09:10', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIAF00P53.0054_2024-12-09 20:19:47', 'WMDIAF00P53.0054', 'Đồng hồ Disney & Marvel Nam M-6066R Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0054-dong-ho-disney-marvel-nam-m-6066r-day-cao-su-53-mm-1.png', '2024-12-09 20:09:06', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIQF00L42.0073_2024-12-06 21:25:38', 'WMDIQF00L42.0073', 'Đồng hồ Disney & Marvel Nam M-9062RGB Dây Da 42 mm', 4950000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây da tổng hợp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00l42.0073-dong-ho-disney-marvel-nam-m-9062rgb-day-da-42-mm-1.png', '2024-12-06 15:01:45', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P37.0062_2024-12-06 21:25:38', 'WMDIQF00P37.0062', 'Đồng hồ Disney & Marvel Nam M-9199-01SWW Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0062-dong-ho-disney-marvel-nam-m-9199-01sww-day-cao-su-37-mm-1.png', '2024-12-06 15:02:20', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P37.0063_2024-12-06 21:25:38', 'WMDIQF00P37.0063', 'Đồng hồ Disney & Marvel Nam M-9199-01BBB Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0063-dong-ho-disney-marvel-nam-m-9199-01bbb-day-cao-su-37-mm-1.png', '2024-12-06 15:02:15', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P40.0060_2024-12-09 20:19:47', 'WMDIQF00P40.0060', 'Đồng hồ Disney & Marvel Nam M-9232BBB Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0060-dong-ho-disney-marvel-nam-m-9232bbb-day-cao-su-40-mm-1.png', '2024-12-09 20:08:30', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIQF00P40.0061_2024-12-06 21:25:38', 'WMDIQF00P40.0061', 'Đồng hồ Disney & Marvel Nam M-9232LTW Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0061-dong-ho-disney-marvel-nam-m-9232ltw-day-cao-su-40-mm-1.png', '2024-12-06 15:02:25', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P42.0070_2024-12-06 21:25:38', 'WMDIQF00P42.0070', 'Đồng hồ Disney & Marvel Nam M-9059SGG Dây Cao Su 42 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p42.0070-dong-ho-disney-marvel-nam-m-9059sgg-day-cao-su-42-mm-1.png', '2024-12-06 15:01:50', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P50.0065_2024-12-06 21:25:38', 'WMDIQF00P50.0065', 'Đồng hồ Disney & Marvel Nam M-5029BRB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0065-dong-ho-disney-marvel-nam-m-5029brb-day-da-50-mm-1.png', '2024-12-06 15:02:11', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P50.0066_2024-12-06 21:25:38', 'WMDIQF00P50.0066', 'Đồng hồ Disney & Marvel Nam M-5029BGB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0066-dong-ho-disney-marvel-nam-m-5029bgb-day-da-50-mm-1.png', '2024-12-06 15:02:07', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P50.0067_2024-12-06 21:25:38', 'WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-12-06 15:02:03', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P50.0068_2024-12-06 21:25:38', 'WMDIQF00P50.0068', 'Đồng hồ Disney & Marvel Nam M-5029BLR Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0068-dong-ho-disney-marvel-nam-m-5029blr-day-da-50-mm-1.png', '2024-12-06 15:01:59', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P50.0069_2024-12-06 21:25:38', 'WMDIQF00P50.0069', 'Đồng hồ Disney & Marvel Nam M-5029HHB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0069-dong-ho-disney-marvel-nam-m-5029hhb-day-da-50-mm-1.png', '2024-12-06 15:01:54', 7280, '9999-12-31 00:00:00', 0, '2024-12-06 21:25:38', '2024-12-06 21:25:38');
+INSERT INTO `dongho` VALUES ('WMDIQF00P52.0049_2024-12-09 20:19:47', 'WMDIQF00P52.0049', 'Đồng hồ Disney & Marvel Nam M-5042B Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0049-dong-ho-disney-marvel-nam-m-5042b-day-da-52-mm-1.png', '2024-12-09 20:09:25', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+INSERT INTO `dongho` VALUES ('WMDIQF00P52.0051_2024-12-09 20:19:47', 'WMDIQF00P52.0051', 'Đồng hồ Disney & Marvel Nam M-5042W Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0051-dong-ho-disney-marvel-nam-m-5042w-day-da-52-mm-1.png', '2024-12-09 20:09:19', 7283, '9999-12-31 00:00:00', 0, '2024-12-09 20:19:47', '2024-12-09 20:19:47');
+
+-- ----------------------------
+-- Table structure for dongho_aggregate
+-- ----------------------------
+DROP TABLE IF EXISTS `dongho_aggregate`;
+CREATE TABLE `dongho_aggregate`  (
+  `sr_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL,
+  `expired_dt` datetime NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of dongho_aggregate
+-- ----------------------------
+INSERT INTO `dongho_aggregate` VALUES ('AG-G9005A G-BK_2024-12-09 21:43:11', 'AG-G9005A G-BK', 'Đồng hồ Aries Gold AG-G9005A G-BK', 12670000, 'Aries Gold', 'Automatic (cơ tự động)', 42, 22, 'Dây da', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/1746421388_%C4%91%E1%BB%93ng%20h%E1%BB%93%20c%C6%A1%20(10).jpg', '2024-12-09 21:40:17', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DD6013C_2024-12-09 21:43:11', 'DD6013C', 'Đồng hồ Diamond D DD6013C', 7868000, 'Diamond D', 'Quartz/Pin', 34, 0, 'Stainless Steel', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/785304038_dong-ho-nu.jpg', '2024-12-09 21:40:39', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM1003S-BL Tiffany Blue_2024-12-09 21:43:11', 'DM1003S-BL Tiffany Blue', 'Đồng hồ Diamond D DM1003S-BL Tiffany Blue', 4350000, 'Diamond D', 'Quartz/Pin', 36.5, 16, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/847068948_dong-ho-thoi-trang63.jpg', '2024-12-09 21:40:40', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM2110L-01_2024-12-09 21:43:11', 'DM2110L-01', 'Đồng hồ Diamond D DM2110L-01', 12500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/387308780_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:22', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM2110L-02_2024-12-09 21:43:11', 'DM2110L-02', 'Đồng hồ Diamond D DM2110L-02', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/867845623_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:23', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM2110L-03_2024-12-09 21:43:11', 'DM2110L-03', 'Đồng hồ Diamond D DM2110L-03', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/1119210792_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:24', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM2110L-04 Tiffany Blue_2024-12-09 21:43:11', 'DM2110L-04 Tiffany Blue', 'Đồng hồ Diamond D DM2110L-04 Tiffany Blue', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/22163033_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:25', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM55865IG-B_2024-12-09 21:43:11', 'DM55865IG-B', 'Đồng hồ Diamond D DM55865IG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/835071113_dong-ho-nu-thoi-trang16.jpg', '2024-12-09 21:40:19', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM55865RG-B_2024-12-09 21:43:11', 'DM55865RG-B', 'Đồng hồ Diamond D DM55865RG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1639341263_dong-ho-nu-thoi-trang22.jpg', '2024-12-09 21:40:21', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM55865S-B_2024-12-09 21:43:11', 'DM55865S-B', 'Đồng hồ Diamond D DM55865S-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1078864526_dong-ho-nu-Diamond-D-DM55865S-B.jpg4.jpg', '2024-12-09 21:40:18', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM63095IG_2024-12-09 21:43:11', 'DM63095IG', 'Đồng hồ Diamond D DM63095IG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1122261145_dong-ho-nu-thoi-trang55.jpg', '2024-12-09 21:40:31', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM63095RG_2024-12-09 21:43:11', 'DM63095RG', 'Đồng hồ Diamond D DM63095RG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1528264129_dong-ho-nu-thoi-trang57.jpg', '2024-12-09 21:40:34', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM63095S_2024-12-09 21:43:11', 'DM63095S', 'Đồng hồ Diamond D DM63095S', 9750000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/844646124_dong-ho-nu-thoi-trang52.jpg', '2024-12-09 21:40:29', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM64205IG-R_2024-12-09 21:43:11', 'DM64205IG-R', 'Đồng hồ Diamond D DM64205IG-R', 5890000, 'Diamond D', 'Quartz/Pin', 33, 16, 'Dây da', 'Hợp kim mạ PVD , đính đá swarovsky', 'https://www.dangquangwatch.vn/upload/img_big/1477535241_dong-ho-nu-thoi-trang5.jpg', '2024-12-09 21:40:38', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM65305IG_2024-12-09 21:43:11', 'DM65305IG', 'Đồng hồ Diamond D DM65305IG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang48-1530435122.jpg', '2024-12-09 21:40:35', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM65305RG_2024-12-09 21:43:11', 'DM65305RG', 'Đồng hồ Diamond D DM65305RG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang46-611652382.jpg', '2024-12-09 21:40:36', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM65305S_2024-12-09 21:43:11', 'DM65305S', 'Đồng hồ Diamond D DM65305S', 9300000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1187229712_2.ca-s%E1%BB%B9-H%C3%B2a-Minzy-%C4%91eo-%C4%91%E1%BB%93ng-h%E1%BB%93-%C4%90%C4%83ng-Quang-DM65305S--(2).jpg', '2024-12-09 21:40:37', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM74505IG-B_2024-12-09 21:43:11', 'DM74505IG-B', 'Đồng hồ Diamond D DM74505IG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1104056469_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:28', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM74505RG-B_2024-12-09 21:43:11', 'DM74505RG-B', 'Đồng hồ Diamond D DM74505RG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1461665036_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:26', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('DM74505W-B Diamond_2024-12-09 21:43:11', 'DM74505W-B Diamond', 'Đồng hồ Diamond D DM74505W-B Diamond', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây cao su cao cấp', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/217483874_dong-ho-nu-thoi-trang19.jpg', '2024-12-09 21:40:27', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P50.0055_2024-12-09 20:19:47', 'WMDIAF00P50.0055', 'Đồng hồ Disney & Marvel Nam M-6069B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0055-dong-ho-disney-marvel-nam-m-6069b-day-cao-su-50-mm-1.png', '2024-12-09 20:09:00', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P50.0056_2024-12-09 20:19:47', 'WMDIAF00P50.0056', 'Đồng hồ Disney & Marvel Nam M-6069R Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0056-dong-ho-disney-marvel-nam-m-6069r-day-cao-su-50-mm-1.png', '2024-12-09 20:08:56', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P50.0057_2024-12-09 20:19:47', 'WMDIAF00P50.0057', 'Đồng hồ Disney & Marvel Nam M-6072B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0057-dong-ho-disney-marvel-nam-m-6072b-day-cao-su-50-mm-1.png', '2024-12-09 20:08:51', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P50.0058_2024-12-09 20:19:47', 'WMDIAF00P50.0058', 'Đồng hồ Disney & Marvel Nam M-6072B1 Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0058-dong-ho-disney-marvel-nam-m-6072b1-day-cao-su-50-mm-1.png', '2024-12-09 20:08:45', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P50.0059_2024-12-09 20:19:47', 'WMDIAF00P50.0059', 'Đồng hồ Disney & Marvel Nam M-6072W Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0059-dong-ho-disney-marvel-nam-m-6072w-day-cao-su-50-mm-1.png', '2024-12-09 20:08:34', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P53.0053_2024-12-09 20:19:47', 'WMDIAF00P53.0053', 'Đồng hồ Disney & Marvel Nam M-6066B Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0053-dong-ho-disney-marvel-nam-m-6066b-day-cao-su-53-mm-1.png', '2024-12-09 20:09:10', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIAF00P53.0054_2024-12-09 20:19:47', 'WMDIAF00P53.0054', 'Đồng hồ Disney & Marvel Nam M-6066R Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0054-dong-ho-disney-marvel-nam-m-6066r-day-cao-su-53-mm-1.png', '2024-12-09 20:09:06', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00L42.0073_2024-12-06 21:25:38', 'WMDIQF00L42.0073', 'Đồng hồ Disney & Marvel Nam M-9062RGB Dây Da 42 mm', 4950000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây da tổng hợp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00l42.0073-dong-ho-disney-marvel-nam-m-9062rgb-day-da-42-mm-1.png', '2024-12-06 15:01:45', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P37.0062_2024-12-06 21:25:38', 'WMDIQF00P37.0062', 'Đồng hồ Disney & Marvel Nam M-9199-01SWW Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0062-dong-ho-disney-marvel-nam-m-9199-01sww-day-cao-su-37-mm-1.png', '2024-12-06 15:02:20', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P37.0063_2024-12-06 21:25:38', 'WMDIQF00P37.0063', 'Đồng hồ Disney & Marvel Nam M-9199-01BBB Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0063-dong-ho-disney-marvel-nam-m-9199-01bbb-day-cao-su-37-mm-1.png', '2024-12-06 15:02:15', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P40.0060_2024-12-09 20:19:47', 'WMDIQF00P40.0060', 'Đồng hồ Disney & Marvel Nam M-9232BBB Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0060-dong-ho-disney-marvel-nam-m-9232bbb-day-cao-su-40-mm-1.png', '2024-12-09 20:08:30', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P40.0061_2024-12-06 21:25:38', 'WMDIQF00P40.0061', 'Đồng hồ Disney & Marvel Nam M-9232LTW Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0061-dong-ho-disney-marvel-nam-m-9232ltw-day-cao-su-40-mm-1.png', '2024-12-06 15:02:25', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P42.0070_2024-12-06 21:25:38', 'WMDIQF00P42.0070', 'Đồng hồ Disney & Marvel Nam M-9059SGG Dây Cao Su 42 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p42.0070-dong-ho-disney-marvel-nam-m-9059sgg-day-cao-su-42-mm-1.png', '2024-12-06 15:01:50', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P50.0065_2024-12-06 21:25:38', 'WMDIQF00P50.0065', 'Đồng hồ Disney & Marvel Nam M-5029BRB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0065-dong-ho-disney-marvel-nam-m-5029brb-day-da-50-mm-1.png', '2024-12-06 15:02:11', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P50.0066_2024-12-06 21:25:38', 'WMDIQF00P50.0066', 'Đồng hồ Disney & Marvel Nam M-5029BGB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0066-dong-ho-disney-marvel-nam-m-5029bgb-day-da-50-mm-1.png', '2024-12-06 15:02:07', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P50.0067_2024-12-06 21:25:38', 'WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-12-06 15:02:03', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P50.0068_2024-12-06 21:25:38', 'WMDIQF00P50.0068', 'Đồng hồ Disney & Marvel Nam M-5029BLR Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0068-dong-ho-disney-marvel-nam-m-5029blr-day-da-50-mm-1.png', '2024-12-06 15:01:59', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P50.0069_2024-12-06 21:25:38', 'WMDIQF00P50.0069', 'Đồng hồ Disney & Marvel Nam M-5029HHB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0069-dong-ho-disney-marvel-nam-m-5029hhb-day-da-50-mm-1.png', '2024-12-06 15:01:54', 7280, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P52.0049_2024-12-09 20:19:47', 'WMDIQF00P52.0049', 'Đồng hồ Disney & Marvel Nam M-5042B Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0049-dong-ho-disney-marvel-nam-m-5042b-day-da-52-mm-1.png', '2024-12-09 20:09:25', 7283, '9999-12-31 00:00:00');
+INSERT INTO `dongho_aggregate` VALUES ('WMDIQF00P52.0051_2024-12-09 20:19:47', 'WMDIQF00P52.0051', 'Đồng hồ Disney & Marvel Nam M-5042W Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0051-dong-ho-disney-marvel-nam-m-5042w-day-da-52-mm-1.png', '2024-12-09 20:09:19', 7283, '9999-12-31 00:00:00');
+
+-- ----------------------------
+-- Table structure for temp_exists_dqw
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_exists_dqw`;
+CREATE TABLE `temp_exists_dqw`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_exists_dqw
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for temp_exists_has_change_dqw
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_exists_has_change_dqw`;
+CREATE TABLE `temp_exists_has_change_dqw`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_exists_has_change_dqw
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for temp_exists_has_change_pnj
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_exists_has_change_pnj`;
+CREATE TABLE `temp_exists_has_change_pnj`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_exists_has_change_pnj
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for temp_exists_pnj
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_exists_pnj`;
+CREATE TABLE `temp_exists_pnj`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_exists_pnj
+-- ----------------------------
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00L42.0073', 'Đồng hồ Disney & Marvel Nam M-9062RGB Dây Da 42 mm', 4950000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây da tổng hợp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00l42.0073-dong-ho-disney-marvel-nam-m-9062rgb-day-da-42-mm-1.png', '2024-12-09 20:07:14', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P37.0062', 'Đồng hồ Disney & Marvel Nam M-9199-01SWW Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0062-dong-ho-disney-marvel-nam-m-9199-01sww-day-cao-su-37-mm-1.png', '2024-12-09 20:08:11', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P37.0063', 'Đồng hồ Disney & Marvel Nam M-9199-01BBB Dây Cao Su 37 mm', 3550000, 'Disney Watch', 'Quartz (Pin)', 37, 21, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p37.0063-dong-ho-disney-marvel-nam-m-9199-01bbb-day-cao-su-37-mm-1.png', '2024-12-09 20:08:06', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P40.0061', 'Đồng hồ Disney & Marvel Nam M-9232LTW Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0061-dong-ho-disney-marvel-nam-m-9232ltw-day-cao-su-40-mm-1.png', '2024-12-09 20:08:22', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P42.0070', 'Đồng hồ Disney & Marvel Nam M-9059SGG Dây Cao Su 42 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 42, 22, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p42.0070-dong-ho-disney-marvel-nam-m-9059sgg-day-cao-su-42-mm-1.png', '2024-12-09 20:07:21', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0065', 'Đồng hồ Disney & Marvel Nam M-5029BRB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0065-dong-ho-disney-marvel-nam-m-5029brb-day-da-50-mm-1.png', '2024-12-09 20:07:57', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0066', 'Đồng hồ Disney & Marvel Nam M-5029BGB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0066-dong-ho-disney-marvel-nam-m-5029bgb-day-da-50-mm-1.png', '2024-12-09 20:07:52', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0067', 'Đồng hồ Disney & Marvel Nam M-5029BLB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0067-dong-ho-disney-marvel-nam-m-5029blb-day-da-50-mm-1.png', '2024-12-09 20:07:43', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0068', 'Đồng hồ Disney & Marvel Nam M-5029BLR Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0068-dong-ho-disney-marvel-nam-m-5029blr-day-da-50-mm-1.png', '2024-12-09 20:07:37', 7283);
+INSERT INTO `temp_exists_pnj` VALUES ('WMDIQF00P50.0069', 'Đồng hồ Disney & Marvel Nam M-5029HHB Dây Cao su 50 mm', 4750000, 'Disney Watch', 'Quartz (Pin)', 50, 29, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p50.0069-dong-ho-disney-marvel-nam-m-5029hhb-day-da-50-mm-1.png', '2024-12-09 20:07:29', 7283);
+
+-- ----------------------------
+-- Table structure for temp_not_exists_dqw
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_not_exists_dqw`;
+CREATE TABLE `temp_not_exists_dqw`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_not_exists_dqw
+-- ----------------------------
+INSERT INTO `temp_not_exists_dqw` VALUES ('AG-G9005A G-BK', 'Đồng hồ Aries Gold AG-G9005A G-BK', 12670000, 'Aries Gold', 'Automatic (cơ tự động)', 42, 22, 'Dây da', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/1746421388_%C4%91%E1%BB%93ng%20h%E1%BB%93%20c%C6%A1%20(10).jpg', '2024-12-09 21:40:17', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DD6013C', 'Đồng hồ Diamond D DD6013C', 7868000, 'Diamond D', 'Quartz/Pin', 34, 0, 'Stainless Steel', 'Stainless Steel', 'https://www.dangquangwatch.vn/upload/img_big/785304038_dong-ho-nu.jpg', '2024-12-09 21:40:39', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM1003S-BL Tiffany Blue', 'Đồng hồ Diamond D DM1003S-BL Tiffany Blue', 4350000, 'Diamond D', 'Quartz/Pin', 36.5, 16, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/847068948_dong-ho-thoi-trang63.jpg', '2024-12-09 21:40:40', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM2110L-01', 'Đồng hồ Diamond D DM2110L-01', 12500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/387308780_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:22', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM2110L-02', 'Đồng hồ Diamond D DM2110L-02', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/867845623_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:23', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM2110L-03', 'Đồng hồ Diamond D DM2110L-03', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/1119210792_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:24', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM2110L-04 Tiffany Blue', 'Đồng hồ Diamond D DM2110L-04 Tiffany Blue', 13500000, 'Diamond D', 'Automatic', 32, 18.8, 'Thép không gỉ', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/22163033_dong-ho-thoi-trang-DMD.jpg11.jpg', '2024-12-09 21:40:25', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM55865IG-B', 'Đồng hồ Diamond D DM55865IG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/835071113_dong-ho-nu-thoi-trang16.jpg', '2024-12-09 21:40:19', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM55865RG-B', 'Đồng hồ Diamond D DM55865RG-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1639341263_dong-ho-nu-thoi-trang22.jpg', '2024-12-09 21:40:21', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM55865S-B', 'Đồng hồ Diamond D DM55865S-B', 7900000, 'Diamond D', 'Quartz/Pin', 32.5, 14, 'Dây da chính hãng', 'Thép không gỉ + đá CZ', 'https://www.dangquangwatch.vn/upload/img_big/1078864526_dong-ho-nu-Diamond-D-DM55865S-B.jpg4.jpg', '2024-12-09 21:40:18', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM63095IG', 'Đồng hồ Diamond D DM63095IG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1122261145_dong-ho-nu-thoi-trang55.jpg', '2024-12-09 21:40:31', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM63095RG', 'Đồng hồ Diamond D DM63095RG', 10500000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1528264129_dong-ho-nu-thoi-trang57.jpg', '2024-12-09 21:40:34', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM63095S', 'Đồng hồ Diamond D DM63095S', 9750000, 'Diamond D', 'Quartz/Pin', 32, 20, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/844646124_dong-ho-nu-thoi-trang52.jpg', '2024-12-09 21:40:29', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM64205IG-R', 'Đồng hồ Diamond D DM64205IG-R', 5890000, 'Diamond D', 'Quartz/Pin', 33, 16, 'Dây da', 'Hợp kim mạ PVD , đính đá swarovsky', 'https://www.dangquangwatch.vn/upload/img_big/1477535241_dong-ho-nu-thoi-trang5.jpg', '2024-12-09 21:40:38', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM65305IG', 'Đồng hồ Diamond D DM65305IG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang48-1530435122.jpg', '2024-12-09 21:40:35', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM65305RG', 'Đồng hồ Diamond D DM65305RG', 9900000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/product/dong-ho-nu-thoi-trang46-611652382.jpg', '2024-12-09 21:40:36', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM65305S', 'Đồng hồ Diamond D DM65305S', 9300000, 'Diamond D', 'Quartz/Pin', 24.3, 11.5, 'Thép không gỉ + đá Swarovski', 'Thép không gỉ + đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1187229712_2.ca-s%E1%BB%B9-H%C3%B2a-Minzy-%C4%91eo-%C4%91%E1%BB%93ng-h%E1%BB%93-%C4%90%C4%83ng-Quang-DM65305S--(2).jpg', '2024-12-09 21:40:37', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM74505IG-B', 'Đồng hồ Diamond D DM74505IG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1104056469_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:28', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM74505RG-B', 'Đồng hồ Diamond D DM74505RG-B', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây da chính hãng', 'Thép không gỉ đính đá Swarovski', 'https://www.dangquangwatch.vn/upload/img_big/1461665036_dong-ho-nu-thoi-trang21.jpg', '2024-12-09 21:40:26', 7283);
+INSERT INTO `temp_not_exists_dqw` VALUES ('DM74505W-B Diamond', 'Đồng hồ Diamond D DM74505W-B Diamond', 6350000, 'Diamond D', 'Quartz/Pin', 0, 16, 'Dây cao su cao cấp', 'Thép không gỉ', 'https://www.dangquangwatch.vn/upload/img_big/217483874_dong-ho-nu-thoi-trang19.jpg', '2024-12-09 21:40:27', 7283);
+
+-- ----------------------------
+-- Table structure for temp_not_exists_pnj
+-- ----------------------------
+DROP TABLE IF EXISTS `temp_not_exists_pnj`;
+CREATE TABLE `temp_not_exists_pnj`  (
+  `product_id` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `product_name` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `price` double NULL DEFAULT NULL,
+  `brand` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `movement` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `dial_size` double NULL DEFAULT NULL,
+  `strap_size` double NULL DEFAULT NULL,
+  `strap_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `case_material` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `img_url` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NULL DEFAULT NULL,
+  `record_time` datetime NULL DEFAULT NULL,
+  `date_id` int NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb3 COLLATE = utf8mb3_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of temp_not_exists_pnj
+-- ----------------------------
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P50.0055', 'Đồng hồ Disney & Marvel Nam M-6069B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0055-dong-ho-disney-marvel-nam-m-6069b-day-cao-su-50-mm-1.png', '2024-12-09 20:09:00', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P50.0056', 'Đồng hồ Disney & Marvel Nam M-6069R Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0056-dong-ho-disney-marvel-nam-m-6069r-day-cao-su-50-mm-1.png', '2024-12-09 20:08:56', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P50.0057', 'Đồng hồ Disney & Marvel Nam M-6072B Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0057-dong-ho-disney-marvel-nam-m-6072b-day-cao-su-50-mm-1.png', '2024-12-09 20:08:51', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P50.0058', 'Đồng hồ Disney & Marvel Nam M-6072B1 Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0058-dong-ho-disney-marvel-nam-m-6072b1-day-cao-su-50-mm-1.png', '2024-12-09 20:08:45', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P50.0059', 'Đồng hồ Disney & Marvel Nam M-6072W Dây Cao Su 50 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 50, 28, 'Dây cao su Caoutchouc caocấp', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p50.0059-dong-ho-disney-marvel-nam-m-6072w-day-cao-su-50-mm-1.png', '2024-12-09 20:08:34', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P53.0053', 'Đồng hồ Disney & Marvel Nam M-6066B Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0053-dong-ho-disney-marvel-nam-m-6066b-day-cao-su-53-mm-1.png', '2024-12-09 20:09:10', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIAF00P53.0054', 'Đồng hồ Disney & Marvel Nam M-6066R Dây Cao Su 53 mm', 4750000, 'Disney Watch', 'Automatic (cơ tự động)', 53, 22, 'Dây cao su Caoutchouc caocấp', 'Alloy (hợp kim xi)', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiaf00p53.0054-dong-ho-disney-marvel-nam-m-6066r-day-cao-su-53-mm-1.png', '2024-12-09 20:09:06', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIQF00P40.0060', 'Đồng hồ Disney & Marvel Nam M-9232BBB Dây Cao Su 40 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 40, 20, 'Dây cao su Caoutchouc caocấp', 'Thép không gỉ', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p40.0060-dong-ho-disney-marvel-nam-m-9232bbb-day-cao-su-40-mm-1.png', '2024-12-09 20:08:30', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIQF00P52.0049', 'Đồng hồ Disney & Marvel Nam M-5042B Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0049-dong-ho-disney-marvel-nam-m-5042b-day-da-52-mm-1.png', '2024-12-09 20:09:25', 7283);
+INSERT INTO `temp_not_exists_pnj` VALUES ('WMDIQF00P52.0051', 'Đồng hồ Disney & Marvel Nam M-5042W Dây Cao su 52 mm', 2550000, 'Disney Watch', 'Quartz (Pin)', 52, 30, 'Dây PU', 'Nhựa', 'https://cdn.pnj.io/images/detailed/211/sp-wmdiqf00p52.0051-dong-ho-disney-marvel-nam-m-5042w-day-da-52-mm-1.png', '2024-12-09 20:09:19', 7283);
+
+-- ----------------------------
+-- Procedure structure for insert_exists_has_change_table_dqw
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `insert_exists_has_change_table_dqw`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_exists_has_change_table_dqw`()
+BEGIN
+  -- UPDATE OLD RECORD
+  UPDATE dongho d
+  SET expired_dt = NOW()
+  WHERE EXISTS (SELECT 1 FROM temp_exists_has_change_dqw t WHERE d.product_id = t.product_id);
+  -- INSERT NEW RECORD
+  INSERT INTO dongho 
+  SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand, movement, dial_size, strap_size,  strap_material, case_material, img_url, record_time, date_id, '9999-12-31' AS expired_dt,0 AS is_deleted, NOW() as created_at, NOW() as updated_at
+    FROM temp_exists_has_change_dqw;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for insert_exists_has_change_table_pnj
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `insert_exists_has_change_table_pnj`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_exists_has_change_table_pnj`()
+BEGIN
+  -- UPDATE OLD RECORD
+  UPDATE dongho d
+  SET expired_dt = NOW()
+  WHERE EXISTS (SELECT 1 FROM temp_exists_has_change_pnj t WHERE d.product_id = t.product_id);
+  -- INSERT NEW RECORD
+  INSERT INTO dongho 
+  SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand, movement, dial_size, strap_size,  strap_material, case_material, img_url, record_time, date_id, '9999-12-31' AS expired_dt,0 AS is_deleted, NOW() as created_at, NOW() as updated_at
+    FROM temp_exists_has_change_pnj;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for insert_not_exists_table_dqw
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `insert_not_exists_table_dqw`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_not_exists_table_dqw`()
+BEGIN
+  INSERT INTO dongho 
+  SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand, movement, dial_size, strap_size,  strap_material, case_material, img_url, record_time, date_id, '9999-12-31' AS expired_dt,0 AS is_deleted, NOW() as created_at, NOW() as updated_at
+    FROM temp_not_exists_dqw;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for insert_not_exists_table_pnj
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `insert_not_exists_table_pnj`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_not_exists_table_pnj`()
+BEGIN
+  INSERT INTO dongho 
+  SELECT CONCAT(product_id, '_', NOW()) AS id, product_id, product_name, price, brand, movement, dial_size, strap_size,  strap_material, case_material, img_url, record_time, date_id, '9999-12-31' AS expired_dt,0 AS is_deleted, NOW() as created_at, NOW() as updated_at
+    FROM temp_not_exists_pnj;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for proc_aggregate
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `proc_aggregate`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_aggregate`()
+BEGIN
+  DROP TABLE IF EXISTS dongho_aggregate;
+  CREATE TABLE dongho_aggregate
+  AS
+  SELECT sr_id, product_id, product_name, price, brand, movement, dial_size, strap_size, strap_material, case_material,	img_url, record_time, date_id, expired_dt
+  FROM dongho
+  WHERE dongho.is_deleted = 0;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for proc_load_wh_dqw
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `proc_load_wh_dqw`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_load_wh_dqw`()
+BEGIN
+  DROP TABLE IF EXISTS temp_not_exists_dqw;
+  DROP TABLE IF EXISTS temp_exists_dqw;
+  DROP TABLE IF EXISTS temp_exists_has_change_dqw;
+	-- CREATE NOT EXISTS TABLE
+    CREATE TABLE temp_not_exists_dqw
+    AS
+    SELECT *
+    FROM staging.dongho_dqw_daily s
+    WHERE NOT EXISTS(
+		SELECT 1
+        FROM warehouse.dongho w
+        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
+    );
+    -- CREATE EXISTS TABLE
+    CREATE TABLE temp_exists_dqw
+    AS
+    SELECT *
+    FROM staging.dongho_dqw_daily s
+    WHERE EXISTS(
+		SELECT 1
+        FROM warehouse.dongho w
+        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
+    );
+    -- CREATE EXISTS HAS CHANGE TABLE
+    CREATE TABLE temp_exists_has_change_dqw
+      AS
+      SELECT *
+      FROM warehouse.temp_exists_dqw e
+      WHERE NOT EXISTS(
+      SELECT 1
+      FROM warehouse.dongho w
+      WHERE 	e.product_id	=	w.product_id
+      AND	e.product_name	=	w.product_name
+      AND	e.price	=	w.price
+      AND	e.brand	=	w.brand
+      AND	e.movement	=	w.movement
+      AND	e.dial_size	=	w.dial_size
+      AND	e.strap_size	=	w.strap_size
+      AND	e.strap_material	=	w.strap_material
+      AND	e.case_material	=	w.case_material
+      AND	e.img_url	=	w.img_url
+      );
+    CALL insert_not_exists_table_dqw;
+    CALL insert_exists_has_change_table_dqw;
+    TRUNCATE staging.dongho_dqw_daily;
+END
+;;
+delimiter ;
+
+-- ----------------------------
+-- Procedure structure for proc_load_wh_pnj
+-- ----------------------------
+DROP PROCEDURE IF EXISTS `proc_load_wh_pnj`;
+delimiter ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_load_wh_pnj`()
+BEGIN
+  DROP TABLE IF EXISTS temp_not_exists_pnj;
+  DROP TABLE IF EXISTS temp_exists_pnj;
+  DROP TABLE IF EXISTS temp_exists_has_change_pnj;
+	-- CREATE NOT EXISTS TABLE
+    CREATE TABLE temp_not_exists_pnj
+    AS
+    SELECT *
+    FROM staging.dongho_pnj_daily s
+    WHERE NOT EXISTS(
+		SELECT 1
+        FROM warehouse.dongho w
+        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
+    );
+    -- CREATE EXISTS TABLE
+    CREATE TABLE temp_exists_pnj
+    AS
+    SELECT *
+    FROM staging.dongho_pnj_daily s
+    WHERE EXISTS(
+		SELECT 1
+        FROM warehouse.dongho w
+        WHERE s.product_id = w.product_id	-- CHECK NATURAL KEY
+    );
+    -- CREATE EXISTS HAS CHANGE TABLE
+    CREATE TABLE temp_exists_has_change_pnj
+      AS
+      SELECT *
+      FROM warehouse.temp_exists_pnj e
+      WHERE NOT EXISTS(
+      SELECT 1
+      FROM warehouse.dongho w
+      WHERE 	e.product_id	=	w.product_id
+      AND	e.product_name	=	w.product_name
+      AND	e.price	=	w.price
+      AND	e.brand	=	w.brand
+      AND	e.movement	=	w.movement
+      AND	e.dial_size	=	w.dial_size
+      AND	e.strap_size	=	w.strap_size
+      AND	e.strap_material	=	w.strap_material
+      AND	e.case_material	=	w.case_material
+      AND	e.img_url	=	w.img_url
+      );
+    CALL insert_not_exists_table_pnj;
+    CALL insert_exists_has_change_table_pnj;
+    TRUNCATE staging.dongho_pnj_daily;
+END
+;;
+delimiter ;
 
 SET FOREIGN_KEY_CHECKS = 1;

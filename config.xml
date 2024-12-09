@@ -4,18 +4,18 @@
 		<server>127.0.0.1:3306</server>
 		<name>control</name>
 		<username>root</username>
-		<password>0607</password>
+		<password>1234</password>
 	</database>
 	<database name="staging">
 		<server>127.0.0.1:3306</server>
 		<name>staging</name>
 		<username>root</username>
-		<password>0607</password>
+		<password>1234</password>
 	</database>
 	<database name="warehouse">
 		<server>127.0.0.1:3306</server>
 		<name>warehouse</name>
 		<username>root</username>
-		<password>0607</password>
+		<password>1234</password>
 	</database>
 </mysql>
